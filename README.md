@@ -1,87 +1,18 @@
 # playwright-cli
 
 * goal
-  * Playwright CLI + SKILLS
+  * ⚠️package Package CLI⚠️
+    * Reason:🧠source code | [Playwright repo](https://github.com/microsoft/playwright/tree/main/packages/playwright-core/src/cli)🧠
 
-## Playwright CLI vs Playwright MCP
+## [Skills](skills)
 
-This package provides CLI interface into Playwright
-If you are using **coding agents**, that is the best fit.
-
-- **CLI**: Modern **coding agents** increasingly favor CLI–based workflows exposed as SKILLs over MCP because CLI invocations are more token-efficient: they avoid loading large tool schemas and verbose accessibility trees into the model context, allowing agents to act through concise, purpose-built commands. This makes CLI + SKILLs better suited for high-throughput coding agents that must balance browser automation with large codebases, tests, and reasoning within limited context windows.
-
-- **MCP**: MCP remains relevant for specialized agentic loops that benefit from persistent state, rich introspection, and iterative reasoning over page structure, such as exploratory automation, self-healing tests, or long-running autonomous workflows where maintaining continuous browser context outweighs token cost concerns. Learn more about [Playwright MCP](https://github.com/microsoft/playwright-mcp).
-
-## Key Features +
-
-- **Token-efficient**. Does not force page data into LLM.
-
-### Requirements
-* Node.js v18+
-* coding agent
-  * _Example:_ Claude Code, GitHub Copilot,  
-
-## Getting Started
-
-## Installation
-
-```bash
-npm install -g @playwright/cli@latest
-playwright-cli --help
-```
-
-### Installing skills
-
-Claude Code, GitHub Copilot and others will use the locally installed skills.
-
-```bash
-playwright-cli install --skills
-```
-
-### Skills-less operation
-
-Point your agent at the CLI and let it cook. It'll read the skill off `playwright-cli --help` on its own:
-
-```
-Test the "add todo" flow on https://demo.playwright.dev/todomvc using playwright-cli.
-Check playwright-cli --help for available commands.
-```
-
-## Demo
-
-```
-> Use playwright skills to test https://demo.playwright.dev/todomvc/.
-  Take screenshots for all successful and failing scenarios.
-```
-
-Your agent will be running commands, but it does not mean you can't play with it manually:
-
-```
-playwright-cli open https://demo.playwright.dev/todomvc/ --headed
-playwright-cli type "Buy groceries"
-playwright-cli press Enter
-playwright-cli type "Water flowers"
-playwright-cli press Enter
-playwright-cli check e21
-playwright-cli check e35
-playwright-cli screenshot
-```
-
-## Headed operation
-
-Playwright CLI is headless by default. If you'd like to see the browser, pass `--headed` to `open`:
-
-```bash
-playwright-cli open https://playwright.dev --headed
-```
+* ⚠️sync -- from -- [Playwright repo](https://github.com/microsoft/playwright)⚠️
 
 ## Sessions
 
-Playwright CLI keeps the browser profile in memory by default. Your cookies and storage state
-are preserved between CLI calls within the session, but lost when the browser closes. Use
-`--persistent` to save the profile to disk for persistence across browser restarts.
-
-You can use different instances of the browser for different projects with sessions. Pass `-s=` to
+TODO: 
+You can use different instances of the browser for different projects with sessions
+* Pass `-s=` to
 the invocation to talk to a specific browser.
 
 ```bash
